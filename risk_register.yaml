@@ -1,0 +1,25 @@
+risks:
+  - id: R1
+    name: Injection glyphique
+    severity: CRITICAL
+    mitigation: Validation stricte schéma .zgs + filtrage
+  - id: R2
+    name: Rollback ΔM11.3 forcé
+    severity: CRITICAL
+    mitigation: Guard counter + blocage après X cycles
+  - id: R3
+    name: Fuite mémoire fractale
+    severity: HIGH
+    mitigation: Masquage TTL + dual-memory ZDM
+  - id: R4
+    name: Attaques adversariales
+    severity: HIGH
+    mitigation: Tests perturbateurs + adversarial training
+  - id: R5
+    name: DoS par complexité
+    severity: MEDIUM
+    mitigation: Timeout + quotas
+  - id: R6
+    name: Empoisonnement parasitique
+    severity: HIGH
+    mitigation: Hash list + blocage sources suspectes

@@ -1,0 +1,7 @@
+name: Zoran-Risk-Security-Register
+version: 1.0
+license: MIT
+description: |
+  Registre officiel des vulnérabilités, risques et solutions de Zoran IA Mimétique.
+  Intègre Risk Register YAML, démos Python (parser sûr, rollback guard, Merkle log),
+  conformité RGPD & AI Act, injecteur ZGS.
