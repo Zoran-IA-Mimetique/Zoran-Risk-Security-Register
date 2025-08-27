@@ -47,3 +47,29 @@
 1. Intégrer ce fichier dans le dépôt (`recommendations.md`).
 2. Lier recommandations ↔ risk_register.yaml (mitigation). 
 3. Automatiser via CI/CD : tests parser, audit Merkle, adversarial testing.
+
+## 8. Supply Chain (dépendances & services tiers)
+- Générer un **SBoM CycloneDX** à chaque release. 
+- Scanner CVE en CI sur dépendances (OS/containers/libs).
+- **Signer** les artefacts (Sigstore Cosign) et vérifier signatures en déploiement.
+- Geler versions via lockfiles ; politique licences (allow/deny).
+
+## 9. Maintenance & Mises à Jour
+- Fenêtres de maintenance planifiées ; **SLA de correctifs** selon sévérité (critique <72h).
+- Process de **CVE triage** et rétroportage si nécessaire.
+- Tests de **sauvegarde/restauration** trimestriels ; revues d’accès semestrielles.
+- Journal de maintenance (immutabilité Merkle).
+
+## 10. Sécurité Physique
+- Badges, contrôle d’accès, surveillance vidéo, **zones sensibles**.
+- Scellés sur racks, cages ; gestion des visiteurs ; disques chiffrés ; **effacement certifié**.
+
+## 11. Ingénierie Sociale
+- **MFA** obligatoire ; sensibilisation anti‑phishing (campagnes simulées).
+- Procédure “**4‑yeux**” pour actions sensibles ; canaux officiels (pas d’out‑of‑band non tracés).
+- Mot de passe : gestionnaire + rotation ; secrets : vault (KMS/HSM).
+
+## 12. Configuration & Documentation
+- Baselines de durcissement (CIS‑like), **IaC** (revue/merge requis).
+- **Doc‑as‑code** avec revues planifiées ; propriétaires nommés (RACI).
+- Checks automatiques (linters, scanners IaC) en CI.

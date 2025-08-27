@@ -23,3 +23,27 @@ risks:
     name: Empoisonnement parasitique
     severity: HIGH
     mitigation: Hash list + blocage sources suspectes
+  - id: R7
+    name: Supply chain (dépendances, services tiers)
+    severity: HIGH
+    mitigation: SBOM + scan CVE + signature artefacts + politiques licences
+  - id: R8
+    name: Maintenance & mises à jour
+    severity: HIGH
+    mitigation: Procédures patching sécurisées + fenêtres maintenance + SLA correctifs
+  - id: R9
+    name: Accès physique
+    severity: MEDIUM
+    mitigation: Contrôle d’accès physique, vidéo, scellés, effacement certifié
+  - id: R10
+    name: Ingénierie sociale
+    severity: HIGH
+    mitigation: MFA + formation anti-phishing + canaux officiels + règle 4-yeux
+  - id: R11
+    name: Mauvaise configuration
+    severity: HIGH
+    mitigation: Baselines de durcissement + audits réguliers + IaC + revue pairs
+  - id: R12
+    name: Documentation obsolète/incomplète
+    severity: MEDIUM
+    mitigation: Doc-as-code + revues programmées + propriétaires désignés

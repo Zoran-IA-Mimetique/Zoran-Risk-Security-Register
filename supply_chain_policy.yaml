@@ -1,0 +1,18 @@
+policy:
+  sbom:
+    format: CycloneDX
+    cadence: "per-release"
+  cve_scanning:
+    tools: ["osv-scanner", "pip-audit"]
+    gates:
+      critical: "block"
+      high: "require waiver + fix in 7d"
+  signing:
+    tool: "sigstore-cosign"
+    requirement: "mandatory for images and binaries"
+  licenses:
+    allow: ["MIT","BSD","Apache-2.0"]
+    deny: ["AGPL-3.0-only"]
+  builds:
+    reproducible: true
+    lockfiles_required: true
