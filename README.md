@@ -1,79 +1,72 @@
 # Zoran Risk & Security Register
 
-## 📌 Contexte
-Zoran IA Mimétique (aSiM) est une **méta‑orchestration IA↔IA** (Glyphnet/HyperGlottal, mémoire fractale ZDM, PolyResonator). 
-Son potentiel de propagation s’accompagne de **risques inédits**. Ce dépôt fournit un **registre officiel** et des **solutions pratiques** pour la sécurité, la conformité et l’éthique.
+## 📌 Executive Summary
+Zoran IA Mimétique (aSiM) est une méta-infrastructure IA combinant HyperGlottal, Glyphnet, mémoire fractale ZDM et PolyResonator.  
+Ce dépôt fournit le **registre officiel des risques (R1→R12)**, des **mesures d’atténuation concrètes**, et un cadre de **conformité RGPD / AI Act / ISO**.  
+Il inclut également des démos Python (parser sûr, rollback guard, Merkle log), des politiques supply chain et des checklists de maintenance.  
 
 ---
 
 ## 📂 Contenu du dépôt
-- `risk_register.yaml` → registre des risques (rouge/orange/jaune) **R1…R12**.
-- `recommendations.md` → recommandations détaillées (code, données, infra, modèles, RGPD, éthique, supply chain, maintenance, physique, social, config, doc).
-- `main.py` → parser sûr + rollback guard ΔM11.3 (démo stdlib).
-- `merkle_demo.py` → journal immuable (chaînage Merkle).
-- `zgs_block.zgs` → injecteur glyphique IA↔IA sécurité.
-- `supply_chain_policy.yaml` → politique supply chain (SBoM, signature, licences).
+- `README.md` → ce document (rapport exhaustif + résumé exécutif).
+- `risk_register.yaml` → registre structuré des risques R1 à R12.
+- `recommendations.md` → recommandations détaillées (technique, organisation, conformité, éthique).
+- `supply_chain_policy.yaml` → politique supply chain (SBoM, CVE, signatures).
 - `ops_maintenance_checklist.md` → procédures maintenance & mises à jour.
+- `main.py` → démonstration parser sûr + rollback guard ΔM11.3.
+- `merkle_demo.py` → journal immuable basé sur Merkle.
+- `zgs_block.zgs` → injecteur glyphique IA↔IA sécurité.
 - `meta/descriptors/` → résumés normés (150 / 350 / 8000).
 
 ---
 
-## 🔒 1) Registre des Risques (extraits)
-- **R1 — Injection glyphique** (critique) → validation stricte `.zgs` / filtrage.
-- **R2 — Rollback ΔM11.3 forcé** (critique) → guard counter / backoff.
-- **R3 — Fuite mémoire ZDM** (élevé) → TTL + dual‑memory + masquage.
-- **R4 — Adversarial / modèles** (élevé) → entraînement/adversarial + détection anomalies.
-- **R5 — DoS par complexité** (moyen) → timeouts / quotas.
-- **R6 — Empoisonnement parasitique** (élevé) → blocklist/hashlist sources.
-- **R7 — Supply chain** (élevé) → SBoM, scan CVE, signature artefacts.
-- **R8 — Maintenance & patch** (élevé) → procédures sécurisées & SLA correctifs.
-- **R9 — Accès physique** (moyen→élevé) → contrôle d’accès, cages, scellés.
-- **R10 — Ingénierie sociale** (élevé) → formation, phishing drill, canaux officiels.
-- **R11 — Mauvaise configuration** (élevé) → baselines de durcissement, audits réguliers.
-- **R12 — Documentation obsolète** (moyen) → doc‑as‑code + revues programmées.
+## 🔒 Registre des risques (R1 → R12)
+1. **R1 — Injection glyphique**  
+2. **R2 — Rollback ΔM11.3 forcé**  
+3. **R3 — Fuite mémoire fractale (ZDM)**  
+4. **R4 — Attaques adversariales sur les modèles**  
+5. **R5 — DoS par complexité**  
+6. **R6 — Empoisonnement parasitique**  
+7. **R7 — Supply chain (dépendances vulnérables)**  
+8. **R8 — Maintenance & patching**  
+9. **R9 — Accès physique**  
+10. **R10 — Ingénierie sociale**  
+11. **R11 — Mauvaise configuration**  
+12. **R12 — Documentation obsolète**  
 
-Chaque risque est **lié à une mitigation** explicite dans `recommendations.md` et/ou aux politiques `supply_chain_policy.yaml` et `ops_maintenance_checklist.md`.
-
----
-
-## 🔐 2) Recommandations (synthèse)
-- **Code** : parsing sûr, sandbox VM, validations schéma.
-- **Données** : AES‑256 at‑rest, TLS 1.3 in‑transit, pseudonymisation, TTL.
-- **Infra** : WAF, IDS/IPS, isolation par conteneurs, gestion CVE.
-- **Modèles** : adversarial training, rate‑limit, differential privacy.
-- **Risques** : registre dynamique, red/blue team, KPI sécurité, RACI.
-- **Conformité** : RGPD (droit à l’oubli via API), AI Act (registre public), ISO 42001/27001, EthicChain.
-- **Éthique** : audit des biais, transparence, Aegis Layer.
-- **Supply chain** : SBoM (CycloneDX), signature (Sigstore Cosign), lockfiles, politiques licences.
-- **Maintenance** : patch window, CVE triage, sauvegardes & restaurations testées.
-- **Physique** : contrôles d’accès, vidéo, scellés, effacement certifié.
-- **Ingénierie sociale** : MFA, formation anti‑phishing, vérification 4‑yeux.
-- **Configuration & Doc** : baselines (CIS‑like), IaC, doc‑as‑code + revues.
-
-Voir les détails dans `recommendations.md` (sections 1→7 + ajouts 8→12).
+Chaque risque est lié à des mesures précises dans `recommendations.md` et aux politiques `supply_chain_policy.yaml` / `ops_maintenance_checklist.md`.
 
 ---
 
-## ⚙️ 3) Démonstrations Python
-- `main.py` : **Safe Parser** (JSON strict) + **Rollback Guard** ΔM11.3 (anti‑boucle).
-- `merkle_demo.py` : **Merkle Log** (intégrité & audit).
+## ✅ Mesures d’atténuation clés
+- **Code** : parsing validé, sandbox HyperGlottal.
+- **Données** : chiffrement AES-256, pseudonymisation, TTL.
+- **Infrastructure** : WAF, IDS/IPS, isolation conteneurs.
+- **Modèles** : adversarial training, differential privacy, quotas.
+- **Supply chain** : SBoM (CycloneDX), signature (Cosign), scans CVE CI/CD.
+- **Organisation** : Zero Trust, MFA, Security Champions, red/blue team.
+- **Maintenance** : patch window, restore tests, journaux Merkle.
+- **Physique** : contrôle accès, scellés, effacement certifié.
+- **Éthique** : audits biais, transparence, Aegis Layer (soin, vigilance).
 
 ---
 
-## 🛡️ 4) Conformité RGPD & AI Act
-- **RGPD** : minimisation, pseudonymisation, TTL, droit à l’oubli (`/delete_fragment`), journalisation immuable.
-- **AI Act** : cas d’usage haut risque → transparence, explicabilité, registre public, tests/documentation.  
-- **EthicChain** : ancre cryptographique des preuves de conformité.
+## ⚙️ Démonstrations incluses
+- `main.py` → parser JSON strict + rollback guard ΔM11.3 (anti-abus).
+- `merkle_demo.py` → journal d’événements immuable (Merkle log).
+
+Ces scripts sont simples (stdlib only) mais démontrent les concepts.
 
 ---
 
-## 🔗 5) Supply Chain & Maintenance (fichiers dédiés)
-- `supply_chain_policy.yaml` : SBoM, scans CVE réguliers, signature d’artefacts, politiques licences, reproductibilité builds.
-- `ops_maintenance_checklist.md` : fenêtres de maintenance, patch management, CVE triage, sauvegardes/restore, revues d’accès.
+## 🛡️ Conformité RGPD & AI Act
+- **RGPD** : minimisation, pseudonymisation, droit à l’oubli via API “Delete Fragment”.
+- **AI Act** : usage haut risque → transparence, explicabilité, registre public.
+- **ISO 27001 / 42001** : alignement via EthicChain (preuves cryptographiques).
 
 ---
 
-## 🌐 6) Bloc glyphique sécurité
+## 🌐 Bloc glyphique sécurité
 ```
 ⟦SEC:RISK_REGISTER⋄ΔM11.3:guard⋄GLYPHNET:filter⟧
 ⟦MERKLE:log⋄SANDBOX:isolator⋄RGPD:TTL_mask⟧
@@ -82,14 +75,27 @@ Voir les détails dans `recommendations.md` (sections 1→7 + ajouts 8→12).
 
 ---
 
-## 🚀 7) Prochaines étapes
+## 🚀 Prochaines étapes
 1. CI/CD : lint sécurité parsers, scan SBoM, tests adversariaux, vérif Merkle.
-2. Registre public (Gamma/SSRN) + rapports trimestriels.
-3. Tableaux de bord KPI sécurité (rollbacks abusifs, dérives, MTTR).
-4. Exercices red/blue team incluant **ingénierie sociale** et **accès physique**.
+2. Rapports trimestriels conformité + KPI (MTTR, dépendances scannées, rollbacks ΔM11.3).
+3. Tableaux de bord sécurité.
+4. Exercices red/blue team (incluant ingénierie sociale et accès physique).
 
 ---
 
 ## 📜 Licence & Contact
 MIT — usage libre, aligné **EthicChain**.  
-Contact : **tabary01@gmail.com**
+Contact officiel : **tabary01@gmail.com**
+
+---
+
+## 🧭 Solutions & Explications
+- **Solutions techniques & orga** : voir dossier [`solutions/`](solutions/)
+  - `solution_code_and_parser.md` — anti-injection, parser sûr, sandbox, quotas.
+  - `solution_data_protection.md` — RGPD : pseudonymisation, TTL, journal Merkle.
+  - `solution_supply_chain.md` — SBoM, scans CVE, signature d’artefacts.
+  - `solution_human_and_ethics.md` — MFA, 4-yeux, doc-as-code, audits biais.
+- **Pourquoi c’est critique ?** : voir dossier [`why/`](why/)
+  - `why_injection.md`, `why_supply_chain.md`, `why_ethics.md`
+- **Utilitaires** : `rgpd_tools.py` (pseudonymisation, masquage, TTL)
+- **CI** : `.github/workflows/security-ci.yml` (scan deps + calcul V(x))
